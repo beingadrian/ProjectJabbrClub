@@ -16,6 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        if launchOptions != nil {
+            
+        }
+        
+        AGSGTGeotriggerManager.setupWithClientId("QfZcP236gBSfHFuK", isProduction: false, completion: {(error: NSError?) in
+            if error != nil {
+                print("Geotrigger Service setup encountered error: %@", error)
+            }
+            else {
+                print("Good to go!")
+            }
+            AGSGTGeotriggerManager.sharedManager().trackingProfile = kAGSGTTrackingProfileAdaptive
+            
+        })
         return true
     }
 

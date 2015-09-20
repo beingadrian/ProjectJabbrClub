@@ -1,0 +1,1 @@
+../../../../GeotriggerSDK/GeotriggerSDK.framework/Versions/A/Headers/AGSGTTriggerBuilder.h
