@@ -498,15 +498,15 @@
     </scenes>
     <resources>
         <image name="Add Icon" width="54" height="54"/>
-<<<<<<< HEAD
+
         <image name="Cancel Icon" width="54" height="54"/>
         <image name="Location Icon" width="55" height="56"/>
-=======
+
         <image name="Chat Tab Icon" width="27" height="27"/>
         <image name="Location Icon" width="55" height="56"/>
         <image name="Location Tab Icon" width="20" height="27"/>
         <image name="Search Icon" width="54" height="53"/>
         <image name="Settings Tab Icon" width="29" height="27"/>
->>>>>>> beingadrian
+
     </resources>
 </document>
