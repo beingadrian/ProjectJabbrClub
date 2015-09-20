@@ -20,6 +20,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     let tester = AGSGTTriggerBuilder()
 //    var circleView: MKCircleView?
     
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var hotspotMakeView: UIView!
     @IBOutlet weak var currentLocationButton: UIButton!
@@ -97,6 +98,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 print("trigger worked")
                 print(self.currentLocation!.coordinate.latitude)
                 print(self.currentLocation!.coordinate.longitude)
+                self.cancelButton.sendActionsForControlEvents(UIControlEvents.TouchUpInside)
+                
                 
                 }, failure: {error in
                     

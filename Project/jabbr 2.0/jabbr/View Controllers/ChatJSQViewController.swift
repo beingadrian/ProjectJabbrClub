@@ -10,7 +10,7 @@ import UIKit
 import MMX
 import JSQMessagesViewController
 
-class ChatJSQViewController: JSQMessagesViewController {
+class ChatJSQViewController: JSQMessagesViewController, MMXMessageReceiver {
     
     // MARK: - Properties
     
@@ -27,6 +27,7 @@ class ChatJSQViewController: JSQMessagesViewController {
         super.viewDidLoad()
 
         // set username
+        MagnetDelegate.sharedDelegate().messageReceiver = self
         self.username = MMXUser.currentUser().username
 
         self.senderDisplayName = self.username
@@ -206,11 +207,12 @@ class ChatJSQViewController: JSQMessagesViewController {
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
         
-        let message = messages[indexPath.item]
-        let nameParts = message.senderDisplayName().componentsSeparatedByString(" ")
-        let initials = (nameParts.map{($0 as NSString).substringToIndex(1)}.joinWithSeparator("") as NSString).substringToIndex(min(nameParts.count, 2)).uppercaseString
-        
-        return JSQMessagesAvatarImageFactory.avatarImageWithUserInitials(initials, backgroundColor: UIColor(white: 0.85, alpha: 1.0), textColor: UIColor(white: 0.65, alpha: 1.0), font: UIFont.systemFontOfSize(14.0), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+//        let message = messages[indexPath.item]
+//        let nameParts = message.senderDisplayName().componentsSeparatedByString(" ")
+//        let initials = (nameParts.map{($0 as NSString).substringToIndex(1)}.joinWithSeparator("") as NSString).substringToIndex(min(nameParts.count, 2)).uppercaseString
+//        
+//        return JSQMessagesAvatarImageFactory.avatarImageWithUserInitials(initials, backgroundColor: UIColor(white: 0.85, alpha: 1.0), textColor: UIColor(white: 0.65, alpha: 1.0), font: UIFont.systemFontOfSize(14.0), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+        return nil
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
@@ -327,6 +329,34 @@ class ChatJSQViewController: JSQMessagesViewController {
         currentRecipient.username = "echo_bot"
         
         return currentRecipient
+    }
+    
+    func didReceiveMMXMessage(mmxMessage: MMXMessage!) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (Int64)(1.0 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+            let message = Message(message: mmxMessage)
+            self.messages.append(message)
+            JSQSystemSoundPlayer.jsq_playMessageReceivedSound()
+            self.finishReceivingMessageAnimated(true)
+            
+            if message.isMediaMessage() {
+                
+                switch message.type {
+                case .Text:
+                    //return nil
+                    print("Text")
+                case .Location:
+                    let location = CLLocation(latitude: (mmxMessage.messageContent["latitude"] as! NSString).doubleValue, longitude: (mmxMessage.messageContent["longitude"] as! NSString).doubleValue)
+                    let locationMediaItem = JSQLocationMediaItem()
+                    locationMediaItem.setLocation(location) {
+                        self.collectionView?.reloadData()
+                    }
+                    message.mediaContent = locationMediaItem
+                default:
+                    break
+                }
+            }
+        })
+
     }
 
     

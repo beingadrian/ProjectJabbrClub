@@ -21,7 +21,14 @@
 @class MMXChannel;
 @class MMXInternalMessageAdaptor;
 
+@protocol MMXMessageReceiver <NSObject>
+
+- (void)didReceiveMMXMessage:(MMXMessage *)mmxMessage;
+
+@end
 @interface MagnetDelegate : NSObject
+
+@property (nonatomic, weak) id<MMXMessageReceiver> messageReceiver;
 
 @property (nonatomic, strong) MMXUser *currentUser;
 

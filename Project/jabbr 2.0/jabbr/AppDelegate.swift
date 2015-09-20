@@ -31,9 +31,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Good to go!")
             }
             AGSGTGeotriggerManager.sharedManager().trackingProfile = kAGSGTTrackingProfileAdaptive
+
             
         })
-
+        
+        AGSGTApiClient.sharedClient().setAuthorizationHeaderWithToken("pMAvKagUvgGH0wEOjk_3mmyZPWfI5fB-1NYs341hyjkkOF5Q_VGTZIfaBLuwRyJqO2TXxKcc63WGTy7cZboZ7dAnjsI2F_Bh2XZgevPNi6BPH8QPLl0z2XQXUV_CbM43jLeIvY21YMCPjMHkG-o_Hg..")
         
         // Initialize Magnet Message
         MMX.setupWithConfiguration("default")

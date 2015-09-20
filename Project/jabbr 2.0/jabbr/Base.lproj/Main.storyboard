@@ -22,8 +22,8 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="90T-TO-T3h">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="519"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-Dx-yhr" userLabel="Add Button">
-                                <rect key="frame" x="255" y="454" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-Dx-yhr" userLabel="Add Button">
+                                <rect key="frame" x="259.5" y="458.5" width="45.5" height="45.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="7bW-y3-ggK"/>
                                     <constraint firstAttribute="width" secondItem="6Or-Dx-yhr" secondAttribute="height" multiplier="1:1" id="BGi-Tg-JVt"/>
@@ -44,8 +44,8 @@
                                     <action selector="addButtonTapped:" destination="16a-su-Nx6" eventType="touchUpInside" id="iYN-7C-lKU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-cl-EKE" userLabel="Location Button">
-                                <rect key="frame" x="255" y="389" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-cl-EKE" userLabel="Location Button">
+                                <rect key="frame" x="259.5" y="397.5" width="45.5" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Atu-zG-iPH"/>
                                     <constraint firstAttribute="width" secondItem="ef5-cl-EKE" secondAttribute="height" multiplier="1:1" id="KPm-FJ-kxA"/>
@@ -118,21 +118,21 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotspot Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-F3-AeD">
-                                        <rect key="frame" x="72" y="8" width="115.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="50" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="bhB-a6-TXV">
                                         <rect key="frame" x="6" y="82" width="248" height="31"/>
                                         <connections>
                                             <action selector="hotspotRadiusSliderAction:" destination="16a-su-Nx6" eventType="valueChanged" id="PZC-b0-gzG"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotspot Radius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-8h-E2N">
-                                        <rect key="frame" x="78.5" y="60" width="103.5" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Radius:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-8h-E2N">
+                                        <rect key="frame" x="89.5" y="60" width="81.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLM-F3-AeD">
+                                        <rect key="frame" x="86" y="0.0" width="89.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -156,7 +156,7 @@
                                     <constraint firstItem="8UW-8h-E2N" firstAttribute="centerX" secondItem="bhB-a6-TXV" secondAttribute="centerX" id="dyQ-KQ-mYo"/>
                                     <constraint firstAttribute="bottom" secondItem="C5N-km-8LF" secondAttribute="bottom" constant="17" id="gqE-cq-RtK"/>
                                     <constraint firstItem="TEU-gU-srl" firstAttribute="width" secondItem="TEU-gU-srl" secondAttribute="height" multiplier="1:1" id="hRE-5A-b3f"/>
-                                    <constraint firstItem="6LH-Zd-2F8" firstAttribute="top" secondItem="gLM-F3-AeD" secondAttribute="bottom" constant="-0.5" id="heh-7w-ecb"/>
+                                    <constraint firstItem="6LH-Zd-2F8" firstAttribute="top" secondItem="gLM-F3-AeD" secondAttribute="bottom" constant="7.5" id="heh-7w-ecb"/>
                                     <constraint firstAttribute="width" secondItem="1a9-bj-wQg" secondAttribute="height" multiplier="77:30" id="jNz-dI-HLN"/>
                                     <constraint firstAttribute="bottom" secondItem="bhB-a6-TXV" secondAttribute="bottom" constant="8" id="qHE-WH-VSr"/>
                                     <constraint firstAttribute="trailing" secondItem="C5N-km-8LF" secondAttribute="trailing" constant="8" id="uor-OE-lNw"/>
@@ -198,6 +198,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="addButton" destination="6Or-Dx-yhr" id="IxF-05-X8R"/>
+                        <outlet property="cancelButton" destination="TEU-gU-srl" id="zn8-9M-nXX"/>
                         <outlet property="currentLocationButton" destination="ef5-cl-EKE" id="VeT-c9-vTr"/>
                         <outlet property="hotspotMakeView" destination="1a9-bj-wQg" id="taw-sD-tBd"/>
                         <outlet property="hotspotSlider" destination="bhB-a6-TXV" id="lNS-j6-PPZ"/>
@@ -459,10 +460,10 @@
             </objects>
             <point key="canvasLocation" x="1448" y="66"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Base Tab Bar Controller-->
         <scene sceneID="jt0-Tv-9bj">
             <objects>
-                <tabBarController id="gq2-Ml-CLo" sceneMemberID="viewController">
+                <tabBarController id="gq2-Ml-CLo" customClass="BaseTabBarController" customModule="jabbr" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="q0s-Fo-iC8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -470,6 +471,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="WrE-xV-gLs" kind="relationship" relationship="viewControllers" id="2IO-on-kqq"/>
                         <segue destination="16a-su-Nx6" kind="relationship" relationship="viewControllers" id="Bak-MZ-kLS"/>

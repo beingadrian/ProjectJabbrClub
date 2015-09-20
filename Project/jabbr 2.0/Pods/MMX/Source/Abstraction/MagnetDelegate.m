@@ -313,6 +313,9 @@ NSString  * const MMXMessageFailureBlockKey = @"MMXMessageFailureBlockKey";
 	[[NSNotificationCenter defaultCenter] postNotificationName:MMXDidReceiveMessageNotification
 														object:nil
 													  userInfo:@{MMXMessageKey:msg}];
+    if (self.messageReceiver && [self.messageReceiver respondsToSelector:@selector(didReceiveMMXMessage:)]) {
+        [self.messageReceiver didReceiveMMXMessage:msg];
+    }
 }
 
 - (void)client:(MMXClient *)client didReceiveServerAckForMessageID:(NSString *)messageID recipient:(MMXUserID *)recipient {

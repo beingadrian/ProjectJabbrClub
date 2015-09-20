@@ -25,7 +25,7 @@
 #import "MMXMessageTypes.h"
 #import "MMXLogger.h"
 #import "MMXRemoteNotification.h"
-
+#import "MagnetDelegate.h"
 @interface MMX : NSObject
 
 /**
