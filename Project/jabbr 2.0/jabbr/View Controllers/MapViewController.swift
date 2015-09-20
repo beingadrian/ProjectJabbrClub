@@ -77,16 +77,29 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     @IBAction func confirmButtonTapped(sender: AnyObject) {
-        builder.triggerId = hotspotTextField.text
-        builder.tags = []
-        builder.direction = "enter"
-        builder.notificationText = "You are near an event!"
-        let params = builder.build()
-        AGSGTApiClient.sharedClient().postPath("trigger/create", parameters: params, success: {
-            //THROW THE SERVER STUFF HERE!
-            }, failure: {error in
-                print("Trigger create error: %@", error.userInfo)
-        })
+        if hotspotTextField.text != "" {
+            builder.triggerId = hotspotTextField.text
+            builder.tags = []
+            builder.direction = "enter"
+            builder.notificationText = "You are near an event!"
+            let params = builder.build()
+            AGSGTApiClient.sharedClient().postPath("trigger/create", parameters: params, success: {void in
+                //THROW THE SERVER STUFF HERE!
+                print("trigger worked")
+                }, failure: {error in
+                    print("Trigger create error: %@", error.userInfo)
+            })
+        }
+        else {
+            UIView.animateWithDuration(0.2,
+                animations: {
+                self.hotspotTextField.backgroundColor = UIColor.redColor()
+                },
+                completion: { void in
+                    UIView.animateWithDuration(0.5, animations: {
+                    self.hotspotTextField.backgroundColor = UIColor.whiteColor()
+                    })})
+        }
     }
 
 
