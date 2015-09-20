@@ -15,6 +15,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var circle: MKCircle?
     var circleRadius = 100.00
     let builder = AGSGTTriggerBuilder()
+    let tester = AGSGTTriggerBuilder()
 //    var circleView: MKCircleView?
     
     @IBOutlet weak var mapView: MKMapView!
@@ -77,18 +78,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
     }
     @IBAction func confirmButtonTapped(sender: AnyObject) {
+//        builder = AGSGTTriggerBuilder()
+        
         if hotspotTextField.text != "" {
             builder.triggerId = hotspotTextField.text
-            builder.tags = []
+            builder.tags = ["tests"]
             builder.direction = "enter"
+            builder.setGeoWithLatitude(currentLocation!.coordinate.latitude,
+                longitude: currentLocation!.coordinate.longitude,
+                distance: circleRadius)
             builder.notificationText = "You are near an event!"
+            builder.notificationUrl = NSURL(string: "jabbr.club")
             let params = builder.build()
             AGSGTApiClient.sharedClient().postPath("trigger/create", parameters: params, success: {void in
                 //THROW THE SERVER STUFF HERE!
                 print("trigger worked")
+                print(self.currentLocation!.coordinate.latitude)
+                print(self.currentLocation!.coordinate.longitude)
                 }, failure: {error in
                     print("Trigger create error: %@", error.userInfo)
             })
+//            tester.triggerId = hotspotTextField.text
+//            let params2 = tester.build()
+//            let params2 = [tester]
+//            let params3 = [NSString(string: "triggerIds") : NSString(string: hotspotTextField.text!)]
+//            AGSGTApiClient.sharedClient().postPath("trigger/run", parameters: params3 as [NSObject : AnyObject], success: {void in
+//                //THROW THE SERVER STUFF HERE!
+//                print("trigger worked (legit)")
+//                }, failure: {error in
+//                    print("Trigger run error: %@", error.userInfo)
+//            })
         }
         else {
             UIView.animateWithDuration(0.2,

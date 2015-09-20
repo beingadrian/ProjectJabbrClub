@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Good to go!")
             }
             AGSGTGeotriggerManager.sharedManager().trackingProfile = kAGSGTTrackingProfileAdaptive
+            
         })
         return true
     }
