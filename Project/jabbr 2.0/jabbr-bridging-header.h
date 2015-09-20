@@ -7,7 +7,11 @@
 //
 
 #import <JSQMessagesViewController/JSQMessages.h>
+
 #import <GeotriggerSDK.h>
+
+#import <MMX/MMX.h>
+
 
 //#ifndef jabbr_bridging_header_h
 //#define jabbr_bridging_header_h

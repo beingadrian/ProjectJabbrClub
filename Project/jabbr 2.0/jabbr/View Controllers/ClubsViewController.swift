@@ -7,13 +7,50 @@
 //
 
 import UIKit
+import MMX
+
 
 class ClubsViewController: UIViewController {
 
+    // MARK: - Properties
+    @IBOutlet weak var clubTableView: UITableView!
+    var selectedClubTitle: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // set club table view
+        clubTableView.delegate = self
+        clubTableView.dataSource = self
+        
+        // mmx log in
+        let username = "beingadrian"
+        let password = "magnet"
+        
+        let credential = NSURLCredential(user: username, password: password, persistence: .None)
+        
+        MMXUser.logInWithCredential(credential,
+            success: { (user) -> Void in
+                
+                print("Successfully logged in.")
+                
+            },
+            failure: { (error) -> Void in
+                
+            })
+        
+        
+        // TODO: get and show clubs
+        
+        
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let chatVC = segue.destinationViewController as! ChatViewController
+        chatVC.clubTitle = selectedClubTitle
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,4 +65,53 @@ class ClubsViewController: UIViewController {
     }
 
 
+}
+
+
+extension ClubsViewController: UITableViewDataSource {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 4
+
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = clubTableView.dequeueReusableCellWithIdentifier("ChatGroupCell") as! ClubTableViewCell
+        
+        switch indexPath.row {
+        case 0:
+            cell.clubTitleLabel.text = "Techcrunch"
+        default:
+            break
+        }
+
+        
+        return cell
+        
+    }
+    
+}
+
+extension ClubsViewController: UITableViewDelegate {
+    
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return 70
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+//        clubTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let cell = self.clubTableView.cellForRowAtIndexPath(indexPath) as! ClubTableViewCell
+        
+        selectedClubTitle = cell.clubTitleLabel.text!
+        
+        performSegueWithIdentifier("ChatViewController", sender: self)
+        
+    }
+    
 }

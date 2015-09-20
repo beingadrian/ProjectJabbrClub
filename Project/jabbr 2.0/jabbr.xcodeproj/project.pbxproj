@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3347E3601BAEC98D0055F4B0 /* ChatJSQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3347E35F1BAEC98D0055F4B0 /* ChatJSQViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		33EFDA581BAE05CE003A7652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA571BAE05CE003A7652 /* AppDelegate.swift */; };
 		33EFDA5D1BAE05CE003A7652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EFDA5B1BAE05CE003A7652 /* Main.storyboard */; };
 		33EFDA5F1BAE05CE003A7652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33EFDA5E1BAE05CE003A7652 /* Assets.xcassets */; };
@@ -16,7 +17,13 @@
 		33EFDA8A1BAE187B003A7652 /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA891BAE187B003A7652 /* ClubsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		33EFDA8C1BAE1885003A7652 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA8B1BAE1885003A7652 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		33EFDA8E1BAE1891003A7652 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA8D1BAE1891003A7652 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+
 		53C9121F1BAE8ADE00256F5F /* HotspotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C9121E1BAE8ADE00256F5F /* HotspotViewController.swift */; settings = {ASSET_TAGS = (); }; };
+
+		33FD9B7D1BAE7058008FBC5C /* ClubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD9B7C1BAE7058008FBC5C /* ClubTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		33FD9B7F1BAE7548008FBC5C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FD9B7E1BAE7548008FBC5C /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		33FD9B811BAE82B3008FBC5C /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33FD9B801BAE82B3008FBC5C /* Configurations.plist */; settings = {ASSET_TAGS = (); }; };
+
 		FE09C796152B35C9A341365F /* Pods_jabbr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C16BC0DD1304A0CC79821E /* Pods_jabbr.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -39,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		21C16BC0DD1304A0CC79821E /* Pods_jabbr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jabbr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3347E35F1BAEC98D0055F4B0 /* ChatJSQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatJSQViewController.swift; sourceTree = "<group>"; };
 		33EFDA541BAE05CE003A7652 /* jabbr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jabbr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EFDA571BAE05CE003A7652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33EFDA5C1BAE05CE003A7652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +62,9 @@
 		33EFDA891BAE187B003A7652 /* ClubsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubsViewController.swift; sourceTree = "<group>"; };
 		33EFDA8B1BAE1885003A7652 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		33EFDA8D1BAE1891003A7652 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		33FD9B7C1BAE7058008FBC5C /* ClubTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubTableViewCell.swift; sourceTree = "<group>"; };
+		33FD9B7E1BAE7548008FBC5C /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		33FD9B801BAE82B3008FBC5C /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		4D636FDBF284AEC3F45528FB /* Pods-jabbr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jabbr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jabbr/Pods-jabbr.debug.xcconfig"; sourceTree = "<group>"; };
 		538B21E71BAE558A006D7445 /* jabbr-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jabbr-bridging-header.h"; sourceTree = "<group>"; };
 		53C9121E1BAE8ADE00256F5F /* HotspotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotspotViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +134,7 @@
 				33EFDA5E1BAE05CE003A7652 /* Assets.xcassets */,
 				33EFDA601BAE05CE003A7652 /* LaunchScreen.storyboard */,
 				33EFDA631BAE05CE003A7652 /* Info.plist */,
+				33FD9B801BAE82B3008FBC5C /* Configurations.plist */,
 			);
 			path = jabbr;
 			sourceTree = "<group>";
@@ -172,7 +184,12 @@
 				33EFDA891BAE187B003A7652 /* ClubsViewController.swift */,
 				33EFDA8B1BAE1885003A7652 /* MapViewController.swift */,
 				33EFDA8D1BAE1891003A7652 /* SettingsViewController.swift */,
+
 				53C9121E1BAE8ADE00256F5F /* HotspotViewController.swift */,
+
+				3347E35F1BAEC98D0055F4B0 /* ChatJSQViewController.swift */,
+				33FD9B7E1BAE7548008FBC5C /* ChatViewController.swift */,
+
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -180,6 +197,7 @@
 		538B21EA1BAE5B6A006D7445 /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				33FD9B7C1BAE7058008FBC5C /* ClubTableViewCell.swift */,
 			);
 			path = "Table View Cells";
 			sourceTree = "<group>";
@@ -315,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33EFDA621BAE05CE003A7652 /* LaunchScreen.storyboard in Resources */,
+				33FD9B811BAE82B3008FBC5C /* Configurations.plist in Resources */,
 				33EFDA5F1BAE05CE003A7652 /* Assets.xcassets in Resources */,
 				33EFDA5D1BAE05CE003A7652 /* Main.storyboard in Resources */,
 			);
@@ -389,9 +408,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3347E3601BAEC98D0055F4B0 /* ChatJSQViewController.swift in Sources */,
 				33EFDA8A1BAE187B003A7652 /* ClubsViewController.swift in Sources */,
 				33EFDA581BAE05CE003A7652 /* AppDelegate.swift in Sources */,
 				33EFDA8E1BAE1891003A7652 /* SettingsViewController.swift in Sources */,
+				33FD9B7D1BAE7058008FBC5C /* ClubTableViewCell.swift in Sources */,
+				33FD9B7F1BAE7548008FBC5C /* ChatViewController.swift in Sources */,
 				33EFDA8C1BAE1885003A7652 /* MapViewController.swift in Sources */,
 				53C9121F1BAE8ADE00256F5F /* HotspotViewController.swift in Sources */,
 			);

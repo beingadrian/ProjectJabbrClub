@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MMX
+
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var currentLocation: CLLocation?
@@ -125,6 +127,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
         // Do any additional setup after loading the view.
 //        let locationManager = CLLocationManager()
         hotspotTextField.keyboardAppearance = UIKeyboardAppearance.Dark
@@ -142,12 +145,31 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 //                }
 //                
 //        }
+
+        // create mmx public forum
+        MMXChannel.createWithName(
+            "techcrunch",
+            summary: "Techcrunch Disrupt 2015 Hackathon is awesome.",
+            isPublic: true,
+            success: {(channel) -> Void in
+                
+            },
+            failure: {(error) -> Void in
+                
+        })
+        
+
+        
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        
     }
+
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
         if overlay is MKCircle {
@@ -193,5 +215,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
