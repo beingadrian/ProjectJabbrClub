@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MMX
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Initialize Magnet Message
+        MMX.setupWithConfiguration("default")
+        
+        // set tab bar to white
+        UITabBar.appearance().barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
+//        UITabBar.appearance().tintColor = UIColor(red: 72/255, green: 178/255, blue: 232/255, alpha: 1)
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        
         return true
     }
 

@@ -7,29 +7,35 @@
 //
 
 import UIKit
+import MMX
+
 
 class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // create mmx public forum
+        MMXChannel.createWithName(
+            "techcrunch",
+            summary: "Techcrunch Disrupt 2015 Hackathon is awesome.",
+            isPublic: true,
+            success: {(channel) -> Void in
+                
+            },
+            failure: {(error) -> Void in
+                
+        })
+        
+
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
