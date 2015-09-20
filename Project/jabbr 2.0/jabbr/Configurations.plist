@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>default</key>
+        <dict>
+            <key>BaseURL</key>
+            <string>mmx://prod-mmx-001.magnet.com:5222</string>
+            <key>DomainName</key>
+            <string>prod-mmx-001</string>
+            <key>AppId</key>
+            <string>ltties2fkki</string>
+            <key>ApiKey</key>
+            <string>3fac0734-1c52-4ca3-a0f0-23fcbd479d88</string>
+            <key>AnonymousSecret</key>
+            <string>cce9da88-feb3-460d-b7a0-44c49631ab44</string>
+            <key>ShouldForceTLS</key>
+            <true/>
+            <key>PublicAPIPort</key>
+            <integer>5221</integer>
+            <key>AllowInvalidCertificates</key>
+            <false/>
+        </dict>
+    </dict>
+</plist>
