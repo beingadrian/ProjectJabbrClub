@@ -206,6 +206,7 @@ class ChatJSQViewController: JSQMessagesViewController, MMXMessageReceiver {
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
+
         
 //        let message = messages[indexPath.item]
 //        let nameParts = message.senderDisplayName().componentsSeparatedByString(" ")
@@ -213,6 +214,9 @@ class ChatJSQViewController: JSQMessagesViewController, MMXMessageReceiver {
 //        
 //        return JSQMessagesAvatarImageFactory.avatarImageWithUserInitials(initials, backgroundColor: UIColor(white: 0.85, alpha: 1.0), textColor: UIColor(white: 0.65, alpha: 1.0), font: UIFont.systemFontOfSize(14.0), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         return nil
+
+
+
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {

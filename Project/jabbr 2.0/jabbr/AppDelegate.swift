@@ -8,6 +8,7 @@
 
 import UIKit
 import MMX
+import Foundation
 
 
 @UIApplicationMain
@@ -39,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize Magnet Message
         MMX.setupWithConfiguration("default")
+        MMXLogger.sharedLogger().level = .Verbose
+        MMXLogger.sharedLogger().startLogging()
         
         // set tab bar to white
         UITabBar.appearance().barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.8)
