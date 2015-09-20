@@ -141,7 +141,13 @@ class ChatJSQViewController: JSQMessagesViewController {
                     })
                     
                 } else {
-                    print("Going to subscribe.")
+                    
+                    channel.subscribeWithSuccess({
+                        print("Subscribed.")
+                        }, failure: { (error) -> Void in
+                            
+                    })
+                    
                 }
                 
             },
