@@ -24,6 +24,8 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-Dx-yhr" userLabel="Add Button">
                                 <rect key="frame" x="259" y="458" width="45.5" height="45.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-Dx-yhr" userLabel="Add Button">
+                                <rect key="frame" x="255" y="454" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="7bW-y3-ggK"/>
                                     <constraint firstAttribute="width" secondItem="6Or-Dx-yhr" secondAttribute="height" multiplier="1:1" id="BGi-Tg-JVt"/>
@@ -46,6 +48,8 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-cl-EKE" userLabel="Location Button">
                                 <rect key="frame" x="259.5" y="398" width="45.5" height="45.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-cl-EKE" userLabel="Location Button">
+                                <rect key="frame" x="255" y="389" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Atu-zG-iPH"/>
                                     <constraint firstAttribute="width" secondItem="ef5-cl-EKE" secondAttribute="height" multiplier="1:1" id="KPm-FJ-kxA"/>
@@ -495,6 +499,8 @@
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M2k-Uo-fIb"/>
                         <viewControllerLayoutGuide type="bottom" id="eHf-g6-nS2"/>
+                        <viewControllerLayoutGuide type="top" id="QMo-72-ntP"/>
+                        <viewControllerLayoutGuide type="bottom" id="B7I-7w-xxb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pEL-gO-thD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>

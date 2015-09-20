@@ -23,9 +23,20 @@ class ClubsViewController: UIViewController {
         clubTableView.delegate = self
         clubTableView.dataSource = self
         
+        // mmx login
+        loginToMMX("beingadrian", password: "magnet")
+        
+        // TODO: get and show clubs
+        
+        
+        
+    }
+    
+    func loginToMMX(username: String, password: String) {
+        
         // mmx log in
-        let username = "beingadrian"
-        let password = "magnet"
+        let username = username
+        let password = password
         
         let credential = NSURLCredential(user: username, password: password, persistence: .None)
         
@@ -37,13 +48,8 @@ class ClubsViewController: UIViewController {
             },
             failure: { (error) -> Void in
                 
-            })
-        
-        
-        // TODO: get and show clubs
-        
-        
-        
+        })
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -72,7 +78,7 @@ extension ClubsViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return 1
 
     }
     
@@ -99,13 +105,14 @@ extension ClubsViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        return 70
+        return 60
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        clubTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        clubTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
         let cell = self.clubTableView.cellForRowAtIndexPath(indexPath) as! ClubTableViewCell
         
         selectedClubTitle = cell.clubTitleLabel.text!
