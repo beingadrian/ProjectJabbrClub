@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MMX
+//import MMX
 
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
@@ -97,8 +97,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 print("trigger worked")
                 print(self.currentLocation!.coordinate.latitude)
                 print(self.currentLocation!.coordinate.longitude)
+                
                 }, failure: {error in
+                    
                     print("Trigger create error: %@", error.userInfo)
+                    
+                    //this is amazing
+                    
             })
 //            tester.triggerId = hotspotTextField.text
 //            let params2 = tester.build()
@@ -121,6 +126,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     self.hotspotTextField.backgroundColor = UIColor.whiteColor()
                     })})
         }
+        
     }
 
 
@@ -147,16 +153,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 //        }
 
         // create mmx public forum
-        MMXChannel.createWithName(
-            "techcrunch",
-            summary: "Techcrunch Disrupt 2015 Hackathon is awesome.",
-            isPublic: true,
-            success: {(channel) -> Void in
-                
-            },
-            failure: {(error) -> Void in
-                
-        })
+//        MMXChannel.createWithName(
+//            "techcrunch",
+//            summary: "Techcrunch Disrupt 2015 Hackathon is awesome.",
+//            isPublic: true,
+//            success: {(channel) -> Void in
+//                
+//            },
+//            failure: {(error) -> Void in
+//                
+//        })
         
 
         
