@@ -5,6 +5,7 @@ PODS:
   - CocoaLumberjack/Core (1.9.2)
   - CocoaLumberjack/Extensions (1.9.2):
     - CocoaLumberjack/Core
+  - GeotriggerSDK (1.1.0)
   - JSQMessagesViewController (7.2.0):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -63,12 +64,14 @@ PODS:
     - MMXXMPPFramework/XEP-0082
 
 DEPENDENCIES:
+  - GeotriggerSDK
   - JSQMessagesViewController
   - MMX
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 7cbf214b27f8e7f7574db6a3fd96352ffaed433d
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
+  GeotriggerSDK: 853043a09c272f64b5bc9ea80de0d8676e815be5
   JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Mantle: 60acd0cd363e27d945bda0a6b8e90577112d28f3

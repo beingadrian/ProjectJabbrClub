@@ -6,6 +6,7 @@ use_frameworks!
 target 'jabbr' do
 	pod 'MMX'
 	pod 'JSQMessagesViewController'
+	pod 'GeotriggerSDK'
 end
 
 target 'jabbrTests' do

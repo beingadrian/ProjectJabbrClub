@@ -16,6 +16,7 @@
 		33EFDA8A1BAE187B003A7652 /* ClubsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA891BAE187B003A7652 /* ClubsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		33EFDA8C1BAE1885003A7652 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA8B1BAE1885003A7652 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		33EFDA8E1BAE1891003A7652 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA8D1BAE1891003A7652 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		53C9121F1BAE8ADE00256F5F /* HotspotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C9121E1BAE8ADE00256F5F /* HotspotViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FE09C796152B35C9A341365F /* Pods_jabbr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C16BC0DD1304A0CC79821E /* Pods_jabbr.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		33EFDA8D1BAE1891003A7652 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4D636FDBF284AEC3F45528FB /* Pods-jabbr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jabbr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jabbr/Pods-jabbr.debug.xcconfig"; sourceTree = "<group>"; };
 		538B21E71BAE558A006D7445 /* jabbr-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jabbr-bridging-header.h"; sourceTree = "<group>"; };
+		53C9121E1BAE8ADE00256F5F /* HotspotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotspotViewController.swift; sourceTree = "<group>"; };
 		740C974F4C8ED3D5699EB8A9 /* Pods-jabbr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jabbr.release.xcconfig"; path = "Pods/Target Support Files/Pods-jabbr/Pods-jabbr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				33EFDA891BAE187B003A7652 /* ClubsViewController.swift */,
 				33EFDA8B1BAE1885003A7652 /* MapViewController.swift */,
 				33EFDA8D1BAE1891003A7652 /* SettingsViewController.swift */,
+				53C9121E1BAE8ADE00256F5F /* HotspotViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				33EFDA581BAE05CE003A7652 /* AppDelegate.swift in Sources */,
 				33EFDA8E1BAE1891003A7652 /* SettingsViewController.swift in Sources */,
 				33EFDA8C1BAE1885003A7652 /* MapViewController.swift in Sources */,
+				53C9121F1BAE8ADE00256F5F /* HotspotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
