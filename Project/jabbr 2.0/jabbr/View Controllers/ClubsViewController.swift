@@ -24,7 +24,7 @@ class ClubsViewController: UIViewController {
         clubTableView.dataSource = self
         
         // mmx login
-        loginToMMX("beingadrian", password: "magnet")
+        loginToMMX("jimmy", password: "jimmy")
         
         // TODO: get and show clubs
         
