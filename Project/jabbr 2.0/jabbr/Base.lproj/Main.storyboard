@@ -22,7 +22,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="90T-TO-T3h">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="519"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-Dx-yhr" userLabel="Add Button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Or-Dx-yhr" userLabel="Add Button">
                                 <rect key="frame" x="255" y="454" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="7bW-y3-ggK"/>
@@ -44,7 +44,7 @@
                                     <action selector="addButtonTapped:" destination="16a-su-Nx6" eventType="touchUpInside" id="iYN-7C-lKU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-cl-EKE" userLabel="Location Button">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-cl-EKE" userLabel="Location Button">
                                 <rect key="frame" x="255" y="389" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Atu-zG-iPH"/>
@@ -484,6 +484,10 @@
         <scene sceneID="NSj-p9-kHO">
             <objects>
                 <viewController id="8w9-7t-CT5" customClass="ChatJSQViewController" customModule="jabbr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QMo-72-ntP"/>
+                        <viewControllerLayoutGuide type="bottom" id="B7I-7w-xxb"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pEL-gO-thD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -498,15 +502,10 @@
     </scenes>
     <resources>
         <image name="Add Icon" width="54" height="54"/>
-
         <image name="Cancel Icon" width="54" height="54"/>
-        <image name="Location Icon" width="55" height="56"/>
-
         <image name="Chat Tab Icon" width="27" height="27"/>
         <image name="Location Icon" width="55" height="56"/>
         <image name="Location Tab Icon" width="20" height="27"/>
-        <image name="Search Icon" width="54" height="53"/>
         <image name="Settings Tab Icon" width="29" height="27"/>
-
     </resources>
 </document>

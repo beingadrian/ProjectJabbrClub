@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3347E3601BAEC98D0055F4B0 /* ChatJSQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3347E35F1BAEC98D0055F4B0 /* ChatJSQViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3362E7E41BAEFD850038C7CA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3362E7E31BAEFD850038C7CA /* Message.swift */; settings = {ASSET_TAGS = (); }; };
+		3362E7E61BAEFDC80038C7CA /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3362E7E51BAEFDC80038C7CA /* MessageType.swift */; settings = {ASSET_TAGS = (); }; };
 		33EFDA581BAE05CE003A7652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EFDA571BAE05CE003A7652 /* AppDelegate.swift */; };
 		33EFDA5D1BAE05CE003A7652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EFDA5B1BAE05CE003A7652 /* Main.storyboard */; };
 		33EFDA5F1BAE05CE003A7652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33EFDA5E1BAE05CE003A7652 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		21C16BC0DD1304A0CC79821E /* Pods_jabbr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jabbr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3347E35F1BAEC98D0055F4B0 /* ChatJSQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatJSQViewController.swift; sourceTree = "<group>"; };
+		3362E7E31BAEFD850038C7CA /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Message.swift; path = jabbr/Message.swift; sourceTree = SOURCE_ROOT; };
+		3362E7E51BAEFDC80038C7CA /* MessageType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
 		33EFDA541BAE05CE003A7652 /* jabbr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jabbr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EFDA571BAE05CE003A7652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33EFDA5C1BAE05CE003A7652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 		33EFDA871BAE0833003A7652 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3362E7E31BAEFD850038C7CA /* Message.swift */,
+				3362E7E51BAEFDC80038C7CA /* MessageType.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -405,6 +411,8 @@
 				3347E3601BAEC98D0055F4B0 /* ChatJSQViewController.swift in Sources */,
 				33EFDA8A1BAE187B003A7652 /* ClubsViewController.swift in Sources */,
 				33EFDA581BAE05CE003A7652 /* AppDelegate.swift in Sources */,
+				3362E7E61BAEFDC80038C7CA /* MessageType.swift in Sources */,
+				3362E7E41BAEFD850038C7CA /* Message.swift in Sources */,
 				33EFDA8E1BAE1891003A7652 /* SettingsViewController.swift in Sources */,
 				33FD9B7D1BAE7058008FBC5C /* ClubTableViewCell.swift in Sources */,
 				33FD9B7F1BAE7548008FBC5C /* ChatViewController.swift in Sources */,
